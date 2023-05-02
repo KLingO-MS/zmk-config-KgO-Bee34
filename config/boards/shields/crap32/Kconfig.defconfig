@@ -1,17 +1,17 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_FLAP32_LEFT
+if SHIELD_CRAP32_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Flap32"
+    default "crap32"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_FLAP32_LEFT || SHIELD_FLAP32_RIGHT
+if SHIELD_CRAP32_LEFT || SHIELD_CRAP32_RIGHT
 
 config ZMK_SPLIT
     default y

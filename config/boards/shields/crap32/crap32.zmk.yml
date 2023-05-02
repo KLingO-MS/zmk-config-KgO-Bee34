@@ -1,11 +1,11 @@
 file_format: "1"
 id: flap32
-name: Flap32
+name: crap32
 type: shield
 url: handwired 32 keys split
 requires: [pro_micro]
 features:
   - keys
 siblings:
-  - Flap32_left
-  - Flap32s_right
+  - crap32_left
+  - crap32_right
