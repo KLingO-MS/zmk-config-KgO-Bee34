@@ -25,7 +25,7 @@
                 , <&macro_release &mo 1>
                 ;
         };
-    }
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -34,7 +34,7 @@
             key-positions = <28 29>;
             bindings = <&bootloader>;
         };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
