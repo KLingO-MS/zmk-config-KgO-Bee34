@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "Flap32.dtsi"
+#include "crap32.dtsi"
 
 / {
 
