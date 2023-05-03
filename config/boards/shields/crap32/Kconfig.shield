@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 config SHIELD_CRAP32_LEFT
-    def_bool $(shields_list_contains, crap32_left)
+    def_bool $(shields_list_contains,crap32_left)
 
 config SHIELD_CRAP32_RIGHT
-    def_bool $(shields_list_contains, crap32_right)
+    def_bool $(shields_list_contains,crap32_right)
