@@ -55,7 +55,7 @@
                 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0    &kp J     &kp L     &kp U     &kp Y     &kp Z
                 &bt BT_CLR   &kp END      &kp UP       &kp HOME     &rgb_ug RGB_ON  &kp M     &kp N     &kp E     &kp I     &kp O
                              &kp RIGHT    &kp DOWN     &kp LEFT     &rgb_ug RGB_EFF &kp K     &kp H     &kp COMMA &kp DOT
-                                                       &trans       &out OUT_TOG    &kp SPACE &kp ENTER
+                                                       &mo_BT       &out OUT_TOG    &kp SPACE &kp ENTER
             >;
         };
     };
