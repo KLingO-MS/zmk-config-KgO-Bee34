@@ -19,6 +19,5 @@ config ZMK_SPLIT
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
-    default y
 
 endif
