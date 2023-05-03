@@ -16,4 +16,8 @@ if SHIELD_CRAP32_LEFT || SHIELD_CRAP32_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_RGB_UNDERGLOW
+    select WS2812_STRIP
+    select SPI
+
 endif
