@@ -287,7 +287,7 @@
                 label = "RESET_COMBO_HOLD";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
-                tapping-term-ms = 3000>;
+                tapping-term-ms = <2500>;
                 bindings = <&to_BOOT>, <&sys_reset>;
         };
 
