@@ -124,6 +124,18 @@
             layers = <_FKEYS>;
         };
 
+        combo_ESC {
+            timeout-ms = <30>;
+            key-positions = <0 10>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_RET {
+            timeout-ms = <30>;
+            key-positions = <9 19>;
+            bindings = <&kp RET>;
+        };
+            
         combo_LPAR {
             timeout-ms = <30>;
             key-positions = <13 14>;
