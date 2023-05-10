@@ -344,12 +344,12 @@
 // |  Q  |  W  |  F  |  P  |  B  |    |  J  |  L  |  U  |  Y  |  Z  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
 //       |  X  |  C  |  D  |  V  |    |  K  |  H  | , ; | . : |
-//         | SHIFT(BSPC) | _NAVI |    | _FKEYS(_NUMPAD) | _NUM_SYM(SPC) |
+//         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
    &kp Q &kp W &kp F &kp P &kp B      &kp J &kp L &kp U    &kp Y   &kp Z
    &kp A &kp R &kp S &kp T &kp G      &kp M &kp N &kp E    &kp I   &kp O
          &kp X &kp C &kp D &kp V      &kp K &kp H &com_sem &dot_col
-           &gqt LSHIFT BSPC &td0      &td1  &spctap X SPACE
+           &td0 &gqt LSHIFT BSPC      &spctap X SPACE &td1
                         >;
                 };
 
@@ -358,12 +358,12 @@
 // |  !  |  @  |  #  |  $  |  %  |    |  ^  |  &  |  *  |  (  |  )  |
 // |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
 //       |  |  |  =  |  +  |  ~  |    |  `  |  -  |  _  |  ?  |
-//                  | BSPC | SPC |    | RET |      |
+//                  | SPC | BSPC |    |      | RET |
                         bindings = <
    &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR
    &kp N1   &kp N2   &kp N3    &kp N4    &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
             &kp PIPE &kp EQUAL &kp PLUS  &kp TILDE      &kp GRAVE &kp MINUS &kp UNDER &kp QMARK
-                               &kp BSPC &kp SPACE       &kp RET   &none
+                               &kp SPACE &kp BSPC       &none     &kp RET
                         >;
                 };
 
@@ -372,12 +372,12 @@
 // | ESC    |      | c,v,x | c,v,x | PRSC |    | PGUP | HOME |  UP  | END  | DEL |
 // | sSHIFT | sALT | sCTRL | sGUI  | INS  |    | PGDN | LEFT | DOWN | RGHT | RET |
 //          |      |       | TAB   | APP  |    |      | TAB  |      |      |
-//                         | BSPC | _BASE |    | _BASE | SPACE |
+//                         | _BASE | BSPC |    | SPACE | _BASE |
                         bindings = <
    &kp ESC    &none    &ctrl_x LC(X) X &gui_x LG(X) X &kp PSCRN      &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL
    &sk LSHIFT &sk LALT &sk LCTRL       &sk LGUI       &kp INS        &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
               &none    &none           &kp TAB        &kp K_APP      &none     &kp TAB  &none    &none
-                                       &kp BSPC       &to_BASE       &to_BASE  &kp SPACE
+                                       &to_BASE       &kp BSPC       &kp SPACE &to_BASE
                         >;
                 };
                 
@@ -386,12 +386,12 @@
 // | ESC | F1 | F2  | F3  | F4  |    | CALC | c,v,x | c,v,x |      |  DEL   |
 // | RET | F5 | F6  | F7  | F8  |    | INS  | sGUI  | sCTRL | sALT | sSHIFT |
 //       | F9 | F10 | F11 | F12 |    | APP  |  TAB  |       |      |
-//                 | BSPC | SPC |    |      |       |
+//                 | SPC | BSPC |    |      |       |
                         bindings = <
    &kp ESC &kp F1 &kp F2  &kp F3  &kp F4        &kp C_AL_CALC &gui_x LG(X) X &ctrl_x LC(X) X &none    &kp DEL
    &kp RET &kp F5 &kp F6  &kp F7  &kp F8        &kp INS       &sk LGUI       &sk LCTRL       &sk LALT &sk LSHIFT
            &kp F9 &kp F10 &kp F11 &kp F12       &kp K_APP     &kp TAB        &none           &none
-                        &kp BSPC  &kp SPACE     &none         &none
+                        &kp SPACE &kp BSPC      &none         &none
                         >;
                 };
 
@@ -400,12 +400,12 @@
 // | BT1     | BT2  | BT3   | BT4  | BT5     |    | + * |  7  |  8  |  9  |  .  |
 // | RGB_TOG | VOL- | MUTE  | VOL+ | OUT_TOG |    | ESC |  4  |  5  |  6  |  0  |
 //           | PREV | PLAYP | NEXT | BT CLR  |    | - / |  1  |  2  |  3  |
-//                           | BKSPC | _BASE |    | _BASE | ENTER |
+//                           | _BASE | BKSPC |    | ENTER | _BASE |
                         bindings = <
-   &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &plus_multi  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_DOT
-   &rgb_ug RGB_TOG &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &out OUT_TOG      &kp ESC      &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_N0
-                   &kp C_PREV   &kp C_PP     &kp C_NEXT   &bt BT_CLR        &minus_div   &kp KP_N1  &kp KP_N2  &kp KP_N3
-                                             &kp BSPC     &to_BASE          &to_BASE     &kp KP_ENTER
+   &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &plus_multi   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_DOT
+   &rgb_ug RGB_TOG &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &out OUT_TOG      &kp ESC       &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_N0
+                   &kp C_PREV   &kp C_PP     &kp C_NEXT   &bt BT_CLR        &minus_div    &kp KP_N1  &kp KP_N2  &kp KP_N3
+                                             &to_BASE     &kp BSPC          &kp KP_ENTER  &to_BASE
                         >;
                 };                
     };
