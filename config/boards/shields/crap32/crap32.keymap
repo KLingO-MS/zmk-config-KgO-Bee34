@@ -341,7 +341,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <250>;
+            tapping_term_ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -381,14 +381,14 @@
 
                 navi_layer {
 // ----------------------------------------    -----------------------------------
-// | ESC    |      | c,v,x | c,v,x | PRSC |    | PGUP | HOME |  UP  | END  | DEL |
+// | ESC    |  S   | c,v,x | c,v,x | PRSC |    | PGUP | HOME |  UP  | END  | DEL |
 // | sSHIFT | sALT | sCTRL | sGUI  | INS  |    | PGDN | LEFT | DOWN | RGHT | RET |
-//          |      |       | TAB   | APP  |    |      | TAB  |      |      |
+//          |  Z   |       | TAB   | APP  |    | APP  | TAB  |      |      |
 //                         | _BASE | BSPC |    | SPACE | _BASE |
                         bindings = <
-   &kp ESC    &none    &ctrl_x LC(X) X &gui_x LG(X) X &kp PSCRN      &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL
+   &kp ESC    &kp S    &ctrl_x LC(X) X &gui_x LG(X) X &kp PSCRN      &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL
    &sk LSHIFT &sk LALT &sk LCTRL       &sk LGUI       &kp INS        &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
-              &none    &none           &kp TAB        &kp K_APP      &none     &kp TAB  &none    &none
+              &kp Z    &none           &kp TAB        &kp K_APP      &kp K_APP &kp TAB  &none    &none
                                        &to_BASE       &kp BSPC       &kp SPACE &to_BASE
                         >;
                 };
