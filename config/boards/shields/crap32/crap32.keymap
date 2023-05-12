@@ -126,29 +126,43 @@
 
         combo_ESC {
             timeout-ms = <50>;
-            key-positions = <11 12 13>;
+            key-positions = <1 2 3>;
             bindings = <&kp ESC>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_TAB {
             timeout-ms = <50>;
-            key-positions = <20 21 22>;
+            key-positions = <11 12 13>;
             bindings = <&kp TAB>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_DEL {
             timeout-ms = <50>;
-            key-positions = <16 17 18>;
+            key-positions = <6 7 8>;
             bindings = <&kp DEL>;
             layers = <_BASE _NUM_SYM>;
         };
             
         combo_RET {
             timeout-ms = <50>;
-            key-positions = <25 26 27>;
+            key-positions = <16 17 18>;
             bindings = <&kp RET>;
+            layers = <_BASE _NUM_SYM>;
+        };
+            
+        combo_BACK {
+            timeout-ms = <50>;
+            key-positions = <20 21 22>;
+            bindings = <&kp K_BACK>;
+            layers = <_BASE _NUM_SYM>;
+        };
+            
+        combo_FWD {
+            timeout-ms = <50>;
+            key-positions = <25 26 27>;
+            bindings = <&kp K_FORWARD>;
             layers = <_BASE _NUM_SYM>;
         };
             
