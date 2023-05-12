@@ -341,7 +341,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <150>;
+            tapping_term_ms = <250>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -360,7 +360,7 @@
                         bindings = <
    AS(Q) AS(W) AS(F) AS(P) AS(B)      AS(J) AS(L) AS(U)    AS(Y)   AS(Z)
    AS(A) AS(R) AS(S) AS(T) AS(G)      AS(M) AS(N) AS(E)    AS(I)   AS(O)
-         AS(X) AS(C) AS(D) AS(V)      AS(K) AS(H) &as COMMA SEMI &as DOT COLON
+         AS(X) AS(C) AS(D) AS(V)      AS(K) AS(H) &as SEMI COMMA &as COLON DOT
            &td0 &gqt LSHIFT BSPC      &spctap X SPACE &td1
                         >;
                 };
