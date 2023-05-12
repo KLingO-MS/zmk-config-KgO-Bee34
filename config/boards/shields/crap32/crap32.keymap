@@ -16,8 +16,6 @@
 #define _FKEYS   3
 #define _NUMPAD  4
 
-#define AS(keycode) &as LS(keycode) keycode
-
 &sk {
     quick-release;
 };
@@ -336,16 +334,6 @@
             tapping-term-ms = <400>;
             bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
         };
-        
-        as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AUTO_SHIFT";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
     };
 
     keymap {
@@ -358,9 +346,9 @@
 //       |  X  |  C  |  D  |  V  |    |  K  |  H  | , ; | . : |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   AS(Q) AS(W) AS(F) AS(P) AS(B)      AS(J) AS(L) AS(U)    AS(Y)   AS(Z)
-   AS(A) AS(R) AS(S) AS(T) AS(G)      AS(M) AS(N) AS(E)    AS(I)   AS(O)
-         AS(X) AS(C) AS(D) AS(V)      AS(K) AS(H) &as SEMI COMMA &as COLON DOT
+   &kp Q &kp W &kp F &kp P &kp B      &kp J &kp L &kp U    &kp Y   &kp Z
+   &kp A &kp R &kp S &kp T &kp G      &kp M &kp N &kp E    &kp I   &kp O
+         &kp X &kp C &kp D &kp V      &kp K &kp H &com_sem &dot_col
            &td0 &gqt LSHIFT BSPC      &spctap X SPACE &td1
                         >;
                 };
