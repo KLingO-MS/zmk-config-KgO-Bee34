@@ -165,7 +165,21 @@
             bindings = <&kp K_FORWARD>;
             layers = <_BASE _NUM_SYM>;
         };
-            
+
+        combo_lAltGr {
+            timeout-ms = <50>;
+            key-positions = <10 20>;
+            bindings = <&kp RALT>;
+            layers = <_BASE _NUM_SYM>;
+        };
+
+        combo_rAltGr {
+            timeout-ms = <50>;
+            key-positions = <19 27>;
+            bindings = <&kp RALT>;
+            layers = <_BASE _NUM_SYM>;
+        };
+          
         combo_LPAR {
             timeout-ms = <50>;
             key-positions = <12 13>;
