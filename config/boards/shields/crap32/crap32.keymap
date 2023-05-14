@@ -155,14 +155,14 @@
         combo_BACK {
             timeout-ms = <50>;
             key-positions = <20 21 22>;
-            bindings = <&kp K_BACK>;
+            bindings = <&kp C_AC_BACK>;
             layers = <_BASE _NUM_SYM>;
         };
             
         combo_FWD {
             timeout-ms = <50>;
             key-positions = <25 26 27>;
-            bindings = <&kp K_FORWARD>;
+            bindings = <&kp C_AC_FORWARD>;
             layers = <_BASE _NUM_SYM>;
         };
 
@@ -415,12 +415,12 @@
 // ----------------------------------------    -----------------------------------
 // | ESC    |      | c,v,x | c,v,x | PRSC |    | PGUP | HOME |  UP  | END  | DEL |
 // | sSHIFT | sALT | sCTRL | sGUI  | INS  |    | PGDN | LEFT | DOWN | RGHT | RET |
-//          |      |       | TAB   | APP  |    | APP  | TAB  |      |      |
+//          |      | CALC  | TAB   | APP  |    | APP  | TAB  |      |      |
 //                         | _BASE | BSPC |    | SPACE | _BASE |
                         bindings = <
    &kp ESC    &none    &ctrl_x LC(X) X &gui_x LG(X) X &kp PSCRN      &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL
    &sk LSHIFT &sk LALT &sk LCTRL       &sk LGUI       &kp INS        &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
-              &none    &none           &kp TAB        &kp K_APP      &kp K_APP &kp TAB  &none    &none
+              &none    &kp C_AL_CALC   &kp TAB        &kp K_APP      &kp K_APP &kp TAB  &none    &none
                                        &to_BASE       &kp BSPC       &kp SPACE &to_BASE
                         >;
                 };
