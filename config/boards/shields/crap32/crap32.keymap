@@ -284,32 +284,32 @@
 
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_COPY_PASTA";
+            label = "CTRL_COPY_CUT";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp LC(C)>, <&kp LC(V)>;
+            bindings = <&kp LC(C)>, <&kp LC(X)>;
         };
 
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
-            label = "GUI_COPY_PASTA";
+            label = "GUI_COPY_CUT";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp LG(C)>, <&kp LG(V)>;
+            bindings = <&kp LG(C)>, <&kp LG(X)>;
         };
 
-        ctrl_x: ctrl_x {
+        ctrl_v: ctrl_v {
                 compatible = "zmk,behavior-hold-tap";
-                label = "CTRL_CUT_HOLD";
+                label = "CTRL_PASTA_HOLD";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <400>;
                 bindings = <&kp>, <&td3>;
         };
 
-        gui_x: gui_x {
+        gui_v: gui_v {
                 compatible = "zmk,behavior-hold-tap";
-                label = "GUI_CUT_HOLD";
+                label = "GUI_PASTA_HOLD";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <400>;
@@ -418,7 +418,7 @@
 //          |      | CALC  | TAB   | APP  |    | APP  | TAB  |      |      |
 //                         | _BASE | BSPC |    | SPACE | _BASE |
                         bindings = <
-   &kp ESC    &none    &ctrl_x LC(X) X &gui_x LG(X) X &kp PSCRN      &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL
+   &kp ESC    &none    &ctrl_x LC(V) V &gui_x LG(V) V &kp PSCRN      &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL
    &sk LSHIFT &sk LALT &sk LCTRL       &sk LGUI       &kp INS        &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
               &none    &kp C_AL_CALC   &kp TAB        &kp K_APP      &kp K_APP &kp TAB  &none    &none
                                        &to_BASE       &kp BSPC       &kp SPACE &to_BASE
@@ -432,7 +432,7 @@
 //       | F9 | F10 | F11 | F12 |    | APP  |  TAB  |       |      |
 //                 | SPC | BSPC |    |      |       |
                         bindings = <
-   &kp ESC &kp F1 &kp F2  &kp F3  &kp F4        &kp C_AL_CALC &gui_x LG(X) X &ctrl_x LC(X) X &none    &kp DEL
+   &kp ESC &kp F1 &kp F2  &kp F3  &kp F4        &kp C_AL_CALC &gui_x LG(V) V &ctrl_x LC(V) V &none    &kp DEL
    &kp RET &kp F5 &kp F6  &kp F7  &kp F8        &kp INS       &sk LGUI       &sk LCTRL       &sk LALT &sk LSHIFT
            &kp F9 &kp F10 &kp F11 &kp F12       &kp K_APP     &kp TAB        &none           &none
                         &kp SPACE &kp BSPC      &none         &none
