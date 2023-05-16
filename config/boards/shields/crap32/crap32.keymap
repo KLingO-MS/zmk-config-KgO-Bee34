@@ -347,19 +347,19 @@
                 bindings = <&to_BOOT>, <&sys_reset>;
         };
 
-        com_sem: comma_semi {
+        com_sqt: comma_squote {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_SEMI";
+            label = "COMMA_SQT";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp SQT>;
             mods = <(MOD_LSFT)>;
         };
 
-        dot_col: dot_colon {
+        dot_dqt: dot_dquote {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_COLON";
+            label = "DOT_DQT";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp DQT>;
             mods = <(MOD_LSFT)>;
         };
 
@@ -387,12 +387,12 @@
 // -------------------------------    -------------------------------
 // |  Q  |  W  |  F  |  P  |  B  |    |  J  |  L  |  U  |  Y  |  Z  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-//       |  X  |  C  |  D  |  V  |    |  K  |  H  | , ; | . : |
+//       |  X  |  C  |  D  |  V  |    |  K  |  H  | , ' | . " |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
    &kp Q &kp W &kp F &kp P &kp B      &kp J &kp L &kp U    &kp Y   &kp Z
    &kp A &kp R &kp S &kp T &kp G      &kp M &kp N &kp E    &kp I   &kp O
-         &kp X &kp C &kp D &kp V      &kp K &kp H &com_sem &dot_col
+         &kp X &kp C &kp D &kp V      &kp K &kp H &com_sqt &dot_dqt
          &td0 &bspctap LSHIFT BSPC    &spctap X SPACE &td1
                         >;
                 };
@@ -401,12 +401,12 @@
 // -------------------------------    -------------------------------
 // |  !  |  @  |  #  |  $  |  %  |    |  ^  |  &  |  *  |  (  |  )  |
 // |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
-//       |  ?  |  _  |  -  |  |  |    |  =  |  +  |  '  |  "  |
+//       |  ?  |  _  |  -  |  |  |    |  =  |  +  |  ;  |  :  |
 //                  | SPC | BSPC |    |      | RET |
                         bindings = <
    &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR
    &kp N1   &kp N2    &kp N3    &kp N4    &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-            &kp QMARK &kp UNDER &kp MINUS &kp PIPE       &kp EQUAL &kp PLUS  &kp SQT   &kp DQT
+            &kp QMARK &kp UNDER &kp MINUS &kp PIPE       &kp EQUAL &kp PLUS  &kp SEMI  &kp COLON
                                 &kp SPACE &kp BSPC       &none     &kp RET
                         >;
                 };
