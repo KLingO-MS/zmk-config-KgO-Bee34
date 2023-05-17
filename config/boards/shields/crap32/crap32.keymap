@@ -328,7 +328,7 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "BSPC_TAP_LSHIFT_HOLD";
                 #binding-cells = <2>;
-                flavor = "hold-preferred";
+                flavor = "balanced";
                 tapping-term-ms = <200>;
                 quick-tap-ms = <170>;
                 // global-quick-tap;
