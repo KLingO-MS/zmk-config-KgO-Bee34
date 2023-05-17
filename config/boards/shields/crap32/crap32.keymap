@@ -160,6 +160,13 @@
             layers = <_BASE _NUM_SYM>;
         };
             
+        combo_X {
+            timeout-ms = <50>;
+            key-positions = <25 27>;
+            bindings = <&kp X>;
+            layers = <_BASE _NUM_SYM>;
+        };
+
         // combo_BACK {
         //     timeout-ms = <50>;
         //     key-positions = <20 21 22>;
@@ -230,19 +237,19 @@
             layers = <_BASE _NUM_SYM>;
         };
 
-        combo_GRAVE {
-            timeout-ms = <45>;
-            key-positions = <1 2>;
-            bindings = <&kp GRAVE>;
-            layers = <_BASE _NUM_SYM>;
-        };
+        // combo_GRAVE {
+        //     timeout-ms = <45>;
+        //     key-positions = <1 2>;
+        //     bindings = <&kp GRAVE>;
+        //     layers = <_BASE _NUM_SYM>;
+        // };
 
-        combo_TILDE {
-            timeout-ms = <45>;
-            key-positions = <7 8>;
-            bindings = <&kp TILDE>;
-            layers = <_BASE _NUM_SYM>;
-        };
+        // combo_TILDE {
+        //     timeout-ms = <45>;
+        //     key-positions = <7 8>;
+        //     bindings = <&kp TILDE>;
+        //     layers = <_BASE _NUM_SYM>;
+        // };
 
         combo_FSLH {
             timeout-ms = <45>;
@@ -371,6 +378,22 @@
             mods = <(MOD_LSFT)>;
         };
 
+        com_sem: comma_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dot_col: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT)>;
+        };
+
         plus_multi: plus_multiply {
             compatible = "zmk,behavior-tap-dance";
             label = "PLUS_MULTIPLY";
@@ -393,14 +416,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  Q  |  W  |  F  |  P  |  B  |    |  J  |  L  |  U  |  Y  |  Z  |
+// |  Q  |  W  |  F  |  P  |  B  |    |  J  |  L  |  U  |  Y  | ' " |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-//       |  X  |  C  |  D  |  V  |    |  K  |  H  | , ' | . " |
+//       |  V  |  C  |  D  |  Z  |    |  K  |  H  | , ; | . : |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp Q &kp W &kp F &kp P &kp B      &kp J &kp L &kp U    &kp Y   &kp Z
+   &kp Q &kp W &kp F &kp P &kp B      &kp J &kp L &kp U    &kp Y   &kp SQT
    &kp A &kp R &kp S &kp T &kp G      &kp M &kp N &kp E    &kp I   &kp O
-         &kp X &kp C &kp D &kp V      &kp K &kp H &com_sqt &dot_dqt
+         &kp V &kp C &kp D &kp Z      &kp K &kp H &com_sem &dot_col
          &td0 &bspctap LSHIFT BSPC    &spctap X SPACE &td1
                         >;
                 };
@@ -409,12 +432,12 @@
 // -------------------------------    -------------------------------
 // |  !  |  @  |  #  |  $  |  %  |    |  ^  |  &  |  *  |  (  |  )  |
 // |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
-//       |  ?  |  _  |  -  |  |  |    |  =  |  +  |  ;  |  :  |
+//       |  ?  |  _  |  -  |  `  |    |  ~  |  +  |  =  |  |  |
 //                  | SPC | BSPC |    |      | RET |
                         bindings = <
    &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR
    &kp N1   &kp N2    &kp N3    &kp N4    &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-            &kp QMARK &kp UNDER &kp MINUS &kp PIPE       &kp EQUAL &kp PLUS  &kp SEMI  &kp COLON
+            &kp QMARK &kp UNDER &kp MINUS &kp GRAVE      &kp TILDE &kp PLUS  &kp EQUAL &kp PIPE
                                 &kp SPACE &kp BSPC       &none     &kp RET
                         >;
                 };
