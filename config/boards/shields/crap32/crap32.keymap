@@ -117,9 +117,16 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_RESET {
+        combo_RESET_L {
             timeout-ms = <50>;
             key-positions = <4 14 23>;
+            bindings = <&rch A A>;
+            layers = <_NAVI>;
+        };
+
+        combo_RESET_R {
+            timeout-ms = <50>;
+            key-positions = <5 15 24>;
             bindings = <&rch A A>;
             layers = <_FKEYS>;
         };
@@ -322,7 +329,7 @@
                 #binding-cells = <2>;
                 flavor = "hold-preferred";
                 tapping-term-ms = <200>;
-                quick-tap-ms = <150>;
+                quick-tap-ms = <170>;
                 // global-quick-tap;
                 bindings = <&kp>, <&kp>;
         };
@@ -333,7 +340,7 @@
                 #binding-cells = <2>;
                 flavor = "balanced";
                 tapping-term-ms = <200>;
-                quick-tap-ms = <150>;
+                quick-tap-ms = <170>;
                 // global-quick-tap;
                 bindings = <&mo_NUM_SYM>, <&kp>;
         };
