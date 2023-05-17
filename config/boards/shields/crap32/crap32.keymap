@@ -432,12 +432,12 @@
 // -------------------------------    -------------------------------
 // |  V  |  W  |  F  |  P  |  B  |    | ' " |  M  |  O  |  U  |  Y  |
 // |  R  |  S  |  T  |  H  |  K  |    |  J  |  N  |  E  |  A  |  I  |
-//       |  C  |  G  |  D  |  Q  |    |  Z  |  L  | , ; | . : |
+//       |  G  |  C  |  D  |  Q  |    |  Z  |  L  | , ; | . : |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp V &kp W &kp F &kp P &kp B      &kp SQT &kp M &kp O    &kp U   &kp Y
+   &kp V &kp W &kp F &kp P &kp B      &kp SQT &kp M &kp U    &kp O   &kp Y
    &kp R &kp S &kp T &kp H &kp K      &kp J   &kp N &kp E    &kp A   &kp I
-         &kp C &kp G &kp D &kp Q      &kp Z   &kp L &com_sem &dot_col
+         &kp G &kp C &kp D &kp Q      &kp Z   &kp L &com_sem &dot_col
          &td0 &bspctap LSHIFT BSPC    &spctap X SPACE &td1
                         >;
                 };
