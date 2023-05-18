@@ -155,14 +155,14 @@
             
         combo_RET {
             timeout-ms = <50>;
-            key-positions = <26 27>;
+            key-positions = <17 18>;
             bindings = <&kp RET>;
             layers = <_BASE _NUM_SYM>;
         };
             
         combo_X {
             timeout-ms = <50>;
-            key-positions = <17 18>;
+            key-positions = <16 17>;
             bindings = <&kp X>;
             layers = <_BASE _NUM_SYM>;
         };
@@ -253,14 +253,14 @@
 
         combo_FSLH {
             timeout-ms = <45>;
-            key-positions = <16 17>;
+            key-positions = <6 7>;
             bindings = <&kp FSLH>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_BSLH {
             timeout-ms = <45>;
-            key-positions = <12 13>;
+            key-positions = <2 3>;
             bindings = <&kp BSLH>;
             layers = <_BASE _NUM_SYM>;
         };
@@ -430,14 +430,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  V  |  W  |  F  |  P  |  B  |    | ' " |  M  |  U  |  O  |  Y  |
-// |  R  |  S  |  T  |  H  |  K  |    |  J  |  N  |  E  |  A  |  I  |
+// |  V  |  W  |  F  |  P  |  B  |    |  J  |  L  |  U  |  O  |  Y  |
+// |  R  |  S  |  T  |  H  |  K  |    | ' " |  N  |  E  |  A  |  I  |
 //       |  G  |  C  |  D  |  Q  |    |  Z  |  L  | , ; | . : |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp V &kp W &kp F &kp P &kp B      &kp SQT &kp M &kp U    &kp O   &kp Y
-   &kp R &kp S &kp T &kp H &kp K      &kp J   &kp N &kp E    &kp A   &kp I
-         &kp G &kp C &kp D &kp Q      &kp Z   &kp L &com_sem &dot_col
+   &kp V &kp W &kp F &kp P &kp B      &kp J   &kp L &kp U    &kp O   &kp Y
+   &kp R &kp S &kp T &kp H &kp K      &kp SQT &kp N &kp E    &kp A   &kp I
+         &kp G &kp C &kp D &kp Q      &kp Z   &kp M &com_sem &dot_col
          &td0 &bspctap LSHIFT BSPC    &spctap X SPACE &td1
                         >;
                 };
