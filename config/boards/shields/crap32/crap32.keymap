@@ -430,14 +430,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  V  |  W  |  F  |  P  |  B  |    |  J  |  L  |  U  |  O  |  Y  |
-// |  R  |  S  |  T  |  H  |  K  |    | ' " |  N  |  E  |  A  |  I  |
-//       |  G  |  C  |  D  |  Q  |    |  Z  |  L  | , ; | . : |
+// |  B  |  W  |  F  |  P  |  V  |    |  J  |  L  |  U  | ' " |  Y  |
+// |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  O  |  I  |
+//       |  K  |  C  |  D  |  Q  |    |  Z  |  H  | , ; | . : |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp V &kp W &kp F &kp P &kp B      &kp J   &kp L &kp U    &kp O   &kp Y
-   &kp R &kp S &kp T &kp H &kp K      &kp SQT &kp N &kp E    &kp A   &kp I
-         &kp G &kp C &kp D &kp Q      &kp Z   &kp M &com_sem &dot_col
+   &kp B &kp W &kp F &kp P &kp V      &kp J &kp L &kp U    &kp SQT &kp Y
+   &kp A &kp R &kp S &kp T &kp G      &kp M &kp N &kp E    &kp O   &kp I
+         &kp K &kp C &kp D &kp Q      &kp Z &kp H &com_sem &dot_col
          &td0 &bspctap LSHIFT BSPC    &spctap X SPACE &td1
                         >;
                 };
