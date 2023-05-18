@@ -430,14 +430,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// | ' " |  B  |  F  |  P  |  V  |    |  K  |  L  |  U  |  Y  |  J  |
+// | ' " |  W  |  F  |  P  |  V  |    |  K  |  L  |  U  |  Y  |  J  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-//       |  W  |  C  |  D  |  Q  |    |  Z  |  H  | , ; | . : |
+//       |  B  |  C  |  D  |  Q  |    |  Z  |  H  | , ; | . : |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp SQT &kp B &kp F &kp P &kp V      &kp K &kp L &kp U    &kp Y &kp J
+   &kp SQT &kp W &kp F &kp P &kp V      &kp K &kp L &kp U    &kp Y &kp J
    &kp A   &kp R &kp S &kp T &kp G      &kp M &kp N &kp E    &kp I &kp O
-           &kp W &kp C &kp D &kp Q      &kp Z &kp H &com_sem &dot_col
+           &kp B &kp C &kp D &kp Q      &kp Z &kp H &com_sem &dot_col
            &td0  &bspctap LSHIFT BSPC   &spctap X SPACE &td1
                         >;
                 };
