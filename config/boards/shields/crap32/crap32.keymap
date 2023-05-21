@@ -485,15 +485,26 @@
                 bindings = <&kp>, <&kp>;
         };
 
-        spctap: space-tap {
+        spc_en: space-tap-en {
                 compatible = "zmk,behavior-hold-tap";
-                label = "SPACE_TAP_MO_SYM_HOLD";
+                label = "SPACE_TAP_MO_SYM_HOLD_EN";
                 #binding-cells = <2>;
                 flavor = "balanced";
                 tapping-term-ms = <200>;
                 quick-tap-ms = <170>;
                 // global-quick-tap;
-                bindings = <&mo_NUM_SYM>, <&kp>;
+                bindings = <&mo_SYM_EN>, <&kp>;
+        };
+
+        spc_sk: space-tap-sk {
+                compatible = "zmk,behavior-hold-tap";
+                label = "SPACE_TAP_MO_SYM_HOLD_SK";
+                #binding-cells = <2>;
+                flavor = "balanced";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <170>;
+                // global-quick-tap;
+                bindings = <&mo_SYM_SK>, <&kp>;
         };
 
         rch: reset-combo-hold {
@@ -575,7 +586,7 @@
    &kp Q &kp W &kp F &kp P &kp B      &kp K &kp L &kp U       &kp Y   &kp SQT
    &kp A &kp R &kp S &kp T &kp G      &kp M &kp N &kp E       &kp I   &kp O
          &kp Z &kp C &kp D &kp V      &kp J &kp H &com_sem_en &dot_col_en
-         &td0 &bspctap LSHIFT BSPC    &spctap X SPACE &td1
+         &td0 &bspctap LSHIFT BSPC    &spc_en X SPACE &td1
                         >;
                 };
 
@@ -589,7 +600,7 @@
    &dh Q RBKT &kp W    &kp F    &dh P SQT &kp B      &kp K &dh L N2   &dh U LBKT  &dh Y N7 &sqt_dqt_sk
    &dh A N8   &kp R    &dh S N3 &dh T N5  &kp G      &kp M &dh N BSLH &dh E N0    &dh I N9 &dh O SEMI
               &dh Z N6 &dh C N4 &kp D     &kp V      &kp J &kp H      &com_sem_sk &dot_col_sk
-              &td0  &bspctap LSHIFT BSPC          &spctap X SPACE &td1
+              &td0  &bspctap LSHIFT BSPC          &spc_sk X SPACE &td1
                         >;
                 };
 
