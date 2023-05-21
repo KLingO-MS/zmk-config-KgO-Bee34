@@ -33,7 +33,7 @@
             bindings
                 = <&rgb_ug RGB_COLOR_HSB(30,95,2)>
                 , <&to _BASE_EN>
-                , <&kp LGUI(SPACE)>
+                , <&kp LG(SPACE)>
                 ;
         };
 
@@ -46,7 +46,7 @@
             bindings
                 = <&rgb_ug RGB_COLOR_HSB(30,95,2)>
                 , <&to _BASE_SK>
-                , <&kp LGUI(SPACE)>
+                , <&kp LG(SPACE)>
                 ;
         };
 
