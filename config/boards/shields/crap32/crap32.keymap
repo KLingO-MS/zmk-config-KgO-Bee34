@@ -517,7 +517,7 @@
 
         dmk: d-makke {
                 compatible = "zmk,behavior-hold-tap";
-                label = "NORMAL_TAP_DIA_HOLD";
+                label = "HOLD_DMK";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <500>;
@@ -528,7 +528,7 @@
 
         rdl: r-dlhe {
                 compatible = "zmk,behavior-hold-tap";
-                label = "NORMAL_TAP_DIA_HOLD";
+                label = "HOLD_RDL";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <500>;
@@ -539,7 +539,7 @@
 
         ldl: l-dlhe {
                 compatible = "zmk,behavior-hold-tap";
-                label = "NORMAL_TAP_DIA_HOLD";
+                label = "HOLD_LDL";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <500>;
@@ -550,7 +550,7 @@
         
         odl: o-dlhe {
                 compatible = "zmk,behavior-hold-tap";
-                label = "NORMAL_TAP_DIA_HOLD";
+                label = "HOLD_ODL";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <500>;
@@ -564,8 +564,8 @@
                 label = "BSPC_TAP_LSHIFT_HOLD";
                 #binding-cells = <2>;
                 flavor = "balanced";
-                tapping-term-ms = <200>;
-                quick-tap-ms = <170>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <220>;
                 // global-quick-tap;
                 bindings = <&kp>, <&kp>;
         };
@@ -575,8 +575,8 @@
                 label = "SPACE_TAP_MO_SYM_HOLD_EN";
                 #binding-cells = <2>;
                 flavor = "balanced";
-                tapping-term-ms = <200>;
-                quick-tap-ms = <170>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <220>;
                 // global-quick-tap;
                 bindings = <&mo_SYM_EN>, <&kp>;
         };
@@ -586,8 +586,8 @@
                 label = "SPACE_TAP_MO_SYM_HOLD_SK";
                 #binding-cells = <2>;
                 flavor = "balanced";
-                tapping-term-ms = <200>;
-                quick-tap-ms = <170>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <220>;
                 // global-quick-tap;
                 bindings = <&mo_SYM_SK>, <&kp>;
         };
