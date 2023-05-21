@@ -175,7 +175,7 @@
             #binding-cells = <0>;
             bindings
                 = <&kp EQUAL>
-                , <&kp D>
+                , <&kp R>
                 ;
         };
 
