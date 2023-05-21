@@ -308,7 +308,7 @@
 
         combo_RBRC_EN {
             timeout-ms = <45>;
-            key-positions = 6 8>;
+            key-positions = <6 8>;
             bindings = <&kp RBRC>;
             layers = <_BASE_EN _SYM_EN>;
         };
