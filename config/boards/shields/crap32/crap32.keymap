@@ -302,7 +302,7 @@
         combo_LBRC_SK {
             timeout-ms = <45>;
             key-positions = <1 3>;
-            bindings = <&kp RALT(N9)>;
+            bindings = <&kp RA(N9)>;
             layers = <_BASE_SK _SYM_SK>;
         };
 
@@ -316,7 +316,7 @@
         combo_RBRC_SK {
             timeout-ms = <45>;
             key-positions = <6 8>;
-            bindings = <&kp RALT(N0)>;
+            bindings = <&kp RA(N0)>;
             layers = <_BASE_SK _SYM_SK>;
         };
 
@@ -330,7 +330,7 @@
         combo_LBKT_SK {
             timeout-ms = <45>;
             key-positions = <20 22>;
-            bindings = <&kp RALT(LBKT)>;
+            bindings = <&kp RA(LBKT)>;
             layers = <_BASE_SK _SYM_SK>;
         };
 
@@ -344,7 +344,7 @@
         combo_RBKT_SK {
             timeout-ms = <45>;
             key-positions = <25 27>;
-            bindings = <&kp RALT(RBKT)>;
+            bindings = <&kp RA(RBKT)>;
             layers = <_BASE_SK _SYM_SK>;
         };
 
@@ -393,7 +393,7 @@
         combo_GT_SK {
             timeout-ms = <45>;
             key-positions = <25 26>;
-            bindings = <&kp RALT(DOT)>;
+            bindings = <&kp RA(DOT)>;
             layers = <_BASE_SK _SYM_SK>;
         };
 
@@ -407,7 +407,7 @@
         combo_LT_SK {
             timeout-ms = <45>;
             key-positions = <21 22>;
-            bindings = <&kp RALT(COMMA)>;
+            bindings = <&kp RA(COMMA)>;
             layers = <_BASE_SK _SYM_SK>;
         };
     };
@@ -528,7 +528,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_SEMI_SK";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp RALT(SEMI)>;
+            bindings = <&kp COMMA>, <&kp RA(SEMI)>;
             mods = <(MOD_LSFT)>;
         };
 
@@ -552,7 +552,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SQT_DQT_SK";
             #binding-cells = <0>;
-            bindings = <&kp RALT(SQT)>, <&kp COLON>;
+            bindings = <&kp RA(SQT)>, <&kp COLON>;
             mods = <(MOD_LSFT)>;
         };
 
