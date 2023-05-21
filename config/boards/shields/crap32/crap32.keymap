@@ -509,8 +509,8 @@
                 label = "NORMAL_TAP_DIA_HOLD";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
-                tapping-term-ms = <500>;
-                quick-tap-ms = <400>;
+                tapping-term-ms = <300>;
+                quick-tap-ms = <250>;
                 global-quick-tap;
                 bindings = <&kp>, <&kp>;
         };
@@ -520,8 +520,8 @@
                 label = "HOLD_DMK";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
-                tapping-term-ms = <500>;
-                quick-tap-ms = <400>;
+                tapping-term-ms = <300>;
+                quick-tap-ms = <250>;
                 global-quick-tap;
                 bindings = <&d_mk>, <&kp>;
         };
@@ -531,8 +531,8 @@
                 label = "HOLD_RDL";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
-                tapping-term-ms = <500>;
-                quick-tap-ms = <400>;
+                tapping-term-ms = <300>;
+                quick-tap-ms = <250>;
                 global-quick-tap;
                 bindings = <&r_dl>, <&kp>;
         };
@@ -542,8 +542,8 @@
                 label = "HOLD_LDL";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
-                tapping-term-ms = <500>;
-                quick-tap-ms = <400>;
+                tapping-term-ms = <300>;
+                quick-tap-ms = <250>;
                 global-quick-tap;
                 bindings = <&l_dl>, <&kp>;
         };
@@ -553,8 +553,8 @@
                 label = "HOLD_ODL";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
-                tapping-term-ms = <500>;
-                quick-tap-ms = <400>;
+                tapping-term-ms = <300>;
+                quick-tap-ms = <250>;
                 global-quick-tap;
                 bindings = <&o_dl>, <&sqt_dqt_sk>;
         };
