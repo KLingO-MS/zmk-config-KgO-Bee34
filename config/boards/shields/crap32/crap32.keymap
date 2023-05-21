@@ -597,9 +597,9 @@
 //       |  Z  |  C  |  D  |  V  |    |  J  |  H  | , ; | . : |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &dh Q RBKT &kp W    &kp F    &dh P SQT &kp B      &kp K &dh L N2   &dh U LBKT  &dh Y N7 &sqt_dqt_sk
-   &dh A N8   &kp R    &dh S N3 &dh T N5  &kp G      &kp M &dh N BSLH &dh E N0    &dh I N9 &dh O SEMI
-              &dh Z N6 &dh C N4 &kp D     &kp V      &kp J &kp H      &com_sem_sk &dot_col_sk
+   &dh RBKT Q &kp W    &kp F    &dh SQT P &kp B      &kp K &dh N2 L   &dh LBKT U  &dh N7 Y &sqt_dqt_sk
+   &dh N8 A   &kp R    &dh N3 S &dh N5 T  &kp G      &kp M &dh BSLH N &dh N0 E    &dh N9 I &dh SEMI O
+              &dh N6 Z &dh N4 C &kp D     &kp V      &kp J &kp H      &com_sem_sk &dot_col_sk
               &td0  &bspctap LSHIFT BSPC          &spc_sk X SPACE &td1
                         >;
                 };
