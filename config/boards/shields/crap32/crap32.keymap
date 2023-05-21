@@ -168,6 +168,47 @@
                 , <&bootloader>
                 ;
         };
+
+        r_dl: dlhe_r {
+            label = "ZM_dlhe_r";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp EQUAL>
+                , <&kp D>
+                ;
+        };
+
+        l_dl: dlhe_l {
+            label = "ZM_dlhe_l";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp EQUAL>
+                , <&kp L>
+                ;
+        };
+
+        o_dl: dlhe_o {
+            label = "ZM_dlhe_o";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp EQUAL>
+                , <&kp O>
+                ;
+        };
+
+        d_mk: makke_d {
+            label = "ZM_makke_d";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp PLUS>
+                , <&kp D>
+                ;
+        };
+
     };
 
     combos {
@@ -467,13 +508,57 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "NORMAL_TAP_DIA_HOLD";
                 #binding-cells = <2>;
-                flavor = "balanced";
+                flavor = "tap-preferred";
                 tapping-term-ms = <500>;
                 quick-tap-ms = <400>;
                 global-quick-tap;
                 bindings = <&kp>, <&kp>;
         };
 
+        dmk: d-makke {
+                compatible = "zmk,behavior-hold-tap";
+                label = "NORMAL_TAP_DIA_HOLD";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <500>;
+                quick-tap-ms = <400>;
+                global-quick-tap;
+                bindings = <&d_mk>, <&kp>;
+        };
+
+        rdl: r-dlhe {
+                compatible = "zmk,behavior-hold-tap";
+                label = "NORMAL_TAP_DIA_HOLD";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <500>;
+                quick-tap-ms = <400>;
+                global-quick-tap;
+                bindings = <&r_dl>, <&kp>;
+        };
+
+        ldl: l-dlhe {
+                compatible = "zmk,behavior-hold-tap";
+                label = "NORMAL_TAP_DIA_HOLD";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <500>;
+                quick-tap-ms = <400>;
+                global-quick-tap;
+                bindings = <&l_dl>, <&kp>;
+        };
+        
+        odl: o-dlhe {
+                compatible = "zmk,behavior-hold-tap";
+                label = "NORMAL_TAP_DIA_HOLD";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <500>;
+                quick-tap-ms = <400>;
+                global-quick-tap;
+                bindings = <&o_dl>, <&sqt_dqt_sk>;
+        };
+        
         bspctap: backsapce-tap {
                 compatible = "zmk,behavior-hold-tap";
                 label = "BSPC_TAP_LSHIFT_HOLD";
@@ -597,10 +682,10 @@
 //       |  Z  |  C  |  D  |  V  |    |  J  |  H  | , ; | . : |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &dh RBKT Q &kp W    &kp F    &dh SQT P &kp B      &kp K &dh N2 L   &dh LBKT U  &dh N7 Y &sqt_dqt_sk
-   &dh N8 A   &kp R    &dh N3 S &dh N5 T  &kp G      &kp M &dh BSLH N &dh N0 E    &dh N9 I &dh SEMI O
-              &dh N6 Z &dh N4 C &kp D     &kp V      &kp J &kp H      &com_sem_sk &dot_col_sk
-              &td0  &bspctap LSHIFT BSPC          &spc_sk X SPACE &td1
+   &dh RBKT Q &kp W    &kp F    &dh SQT P &kp B      &ldl K K &dh N2 L   &dh LBKT U  &dh N7 Y &odl O O
+   &dh N8 A   &rdl R R &dh N3 S &dh N5 T  &kp G      &kp M    &dh BSLH N &dh N0 E    &dh N9 I &dh SEMI O
+              &dh N6 Z &dh N4 C &dmk D D  &kp V      &kp J    &kp H      &com_sem_sk &dot_col_sk
+                     &td0  &bspctap LSHIFT BSPC      &spc_sk X SPACE &td1
                         >;
                 };
 
