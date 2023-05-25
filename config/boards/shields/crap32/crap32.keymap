@@ -113,6 +113,21 @@
                 , <&bootloader>
                 ;
         };
+
+        sir_a: siroke_a {
+            label = "ZM_siroke_a";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp U>
+                , <&macro_tap &kp KP_N0>
+                , <&macro_tap &kp KP_N2>
+                , <&macro_tap &kp KP_N2>
+                , <&macro_tap &kp KP_N8>
+                , <&macro_release &kp LALT>
+                ;
+        };
     };
 
     combos {
@@ -126,9 +141,9 @@
 
         combo_RESET_R {
             timeout-ms = <50>;
-            key-positions = <5 15 24>;
+            key-positions = <5 15>;
         //    bindings = <&rch A A>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(30,95,2)>;
+            bindings = <&sir_a>;
             // layers = <_FKEYS>;
         };
 
