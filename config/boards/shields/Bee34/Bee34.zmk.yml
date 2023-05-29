@@ -1,0 +1,11 @@
+file_format: "1"
+id: Bee34
+name: Bee34
+type: shield
+url: handwired 34 keys split
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - Bee34_left
+  - Bee34_right

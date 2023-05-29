@@ -1,17 +1,17 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_CRAP32_LEFT
+if SHIELD_BEE34_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "crap32"
+    default "Bee34"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_CRAP32_LEFT || SHIELD_CRAP32_RIGHT
+if SHIELD_BEE34_LEFT || SHIELD_BEE34_RIGHT
 
 config ZMK_SPLIT
     default y

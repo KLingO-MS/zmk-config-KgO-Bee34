@@ -14,8 +14,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: crap32_left
+    shield: Bee34_left
   - board: nice_nano_v2
-    shield: crap32_right
+    shield: Bee34_right
 #  - board: nice_nano_v2
 #    shield: settings_reset
