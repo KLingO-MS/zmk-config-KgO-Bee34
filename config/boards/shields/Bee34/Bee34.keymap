@@ -381,12 +381,12 @@
 // -------------------------------    -------------------------------
 // |  Q  |  W  |  V  |  P  |  B  |    |  K  |  L  |  U  |  Y  |  J  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-// |  X  |  Z  |  C  |  D  |  F  |    | ' " |  H  | , ; | . : | ? ! |
+// | ? ! |  Z  |  C  |  D  |  F  |    |  X  |  H  | , ; | . : | ' " |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp Q &kp W &kp V &kp P &kp B      &kp K   &kp L &kp U    &kp Y    &kp J
-   &kp A &kp R &kp S &kp T &kp G      &kp M   &kp N &kp E    &kp I    &kp O
-   &kp X &kp Z &kp C &kp D &kp F      &kp SQT &kp H &com_sem &dot_col &qmk_exc
+   &kp Q    &kp W &kp V &kp P &kp B      &kp K &kp L &kp U    &kp Y    &kp J
+   &kp A    &kp R &kp S &kp T &kp G      &kp M &kp N &kp E    &kp I    &kp O
+   &qmk_exc &kp Z &kp C &kp D &kp F      &kp X &kp H &com_sem &dot_col &kp SQT
          &td0 &bspctap LSHIFT BSPC    &spctap X SPACE &td1
                         >;
                 };
