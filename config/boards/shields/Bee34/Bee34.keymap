@@ -79,10 +79,10 @@
             tap-ms = <0>;
             bindings
                 = <&macro_tap &rgb_ug RGB_SYM>
-                , <&macro_press &sl _NUM_SYM>
+                , <&macro_press &mo _NUM_SYM>
                 , <&macro_pause_for_release>
                 , <&macro_tap &rgb_ug RGB_BASE>
-                , <&macro_release &sl _NUM_SYM>
+                , <&macro_release &mo _NUM_SYM>
                 ;
         };
 
@@ -313,7 +313,7 @@
                 tapping-term-ms = <180>;
                 quick-tap-ms = <180>;
                 // global-quick-tap;
-                bindings = <&sk>, <&kp>;
+                bindings = <&kp>, <&kp>;
         };
 
         spctap: space-tap {
