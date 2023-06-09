@@ -310,8 +310,8 @@
                 label = "BSPC_TAP_LSHIFT_HOLD";
                 #binding-cells = <2>;
                 flavor = "balanced";
-                tapping-term-ms = <200>;
-                quick-tap-ms = <200>;
+                tapping-term-ms = <170>;
+                quick-tap-ms = <170>;
                 // global-quick-tap;
                 bindings = <&kp>, <&kp>;
         };
