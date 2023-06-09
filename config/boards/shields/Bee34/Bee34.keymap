@@ -310,8 +310,8 @@
                 label = "BSPC_TAP_LSHIFT_HOLD";
                 #binding-cells = <2>;
                 flavor = "balanced";
-                tapping-term-ms = <180>;
-                quick-tap-ms = <180>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <200>;
                 // global-quick-tap;
                 bindings = <&kp>, <&kp>;
         };
@@ -321,8 +321,8 @@
                 label = "SPACE_TAP_MO_SYM_HOLD";
                 #binding-cells = <2>;
                 flavor = "balanced";
-                tapping-term-ms = <180>;
-                quick-tap-ms = <180>;
+                tapping-term-ms = <250>;
+                quick-tap-ms = <200>;
                 // global-quick-tap;
                 bindings = <&mo_NUM_SYM>, <&kp>;
         };
@@ -432,7 +432,7 @@
    &kp ESC &kp F1 &kp F2  &kp F3  &kp F4        &kp C_AL_CALC &gui_x LG(X) X &ctrl_x LC(X) X &none    &kp DEL
    &kp RET &kp F5 &kp F6  &kp F7  &kp F8        &kp INS       &sk LGUI       &sk LCTRL       &sk LALT &sk LSHIFT
    &none   &kp F9 &kp F10 &kp F11 &kp F12       &kp K_APP     &kp TAB        &none           &none    &none
-                        &kp SPACE &kp BSPC      &none         &none
+                       &caps_word &kp BSPC      &none         &none
                         >;
                 };
 
