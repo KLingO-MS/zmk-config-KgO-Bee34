@@ -16,10 +16,10 @@
 #define _F_NAV   2
 #define _BT_NP   3
 
-#define RGB_BASE RGB_COLOR_HSB(230,20,3)
-#define RGB_SYM RGB_COLOR_HSB(0,80,3)
-#define RGB_F_NAV RGB_COLOR_HSB(100,80,3)
-#define RGB_BT_NP RGB_COLOR_HSB(200,80,3)
+#define RGB_BASE RGB_COLOR_HSB(30,90,2)
+#define RGB_SYM RGB_COLOR_HSB(0,90,2)
+#define RGB_F_NAV RGB_COLOR_HSB(100,100,2)
+#define RGB_BT_NP RGB_COLOR_HSB(200,100,2)
 
 &sk {
     quick-release;
