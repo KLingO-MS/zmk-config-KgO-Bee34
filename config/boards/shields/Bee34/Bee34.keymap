@@ -16,8 +16,18 @@
 #define _FKEYS   3
 #define _NUMPAD  4
 
+#define RGB_BASE RGB_COLOR_HSB(30,90,2)
+#define RGB_NAVI RGB_COLOR_HSB(100,100,2)
+#define RGB_FKEYS RGB_COLOR_HSB(280,100,2)
+#define RGB_SYM RGB_COLOR_HSB(0,90,2)
+#define RGB_NPAD RGB_COLOR_HSB(200,100,2)
+
 &sk {
     quick-release;
+};
+
+&sl {
+    release-after-ms = <300>;
 };
 
 / {
@@ -29,7 +39,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&rgb_ug RGB_COLOR_HSB(30,95,2)>
+                = <&rgb_ug RGB_BASE>
                 , <&to _BASE>
                 ;
         };
@@ -41,7 +51,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&rgb_ug RGB_COLOR_HSB(80,100,2)>
+                = <&rgb_ug RGB_NAVI>
                 , <&to _NAVI>
                 ;
         };
@@ -53,10 +63,10 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_tap &rgb_ug RGB_COLOR_HSB(80,100,2)>
+                = <&macro_tap &rgb_ug RGB_NAVI>
                 , <&macro_press &mo _NAVI>
                 , <&macro_pause_for_release>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(30,95,2)>
+                , <&macro_tap &rgb_ug RGB_BASE>
                 , <&macro_release &mo _NAVI>
                 ;
         };
@@ -68,10 +78,10 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_tap &rgb_ug RGB_COLOR_HSB(10,95,2)>
+                = <&macro_tap &rgb_ug RGB_SYM>
                 , <&macro_press &mo _NUM_SYM>
                 , <&macro_pause_for_release>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(30,95,2)>
+                , <&macro_tap &rgb_ug RGB_BASE>
                 , <&macro_release &mo _NUM_SYM>
                 ;
         };
@@ -83,10 +93,10 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_tap &rgb_ug RGB_COLOR_HSB(270,100,2)>
+                = <&macro_tap &rgb_ug RGB_FKEYS>
                 , <&macro_press &mo _FKEYS>
                 , <&macro_pause_for_release>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(30,95,2)>
+                , <&macro_tap &rgb_ug RGB_BASE>
                 , <&macro_release &mo _FKEYS>
                 ;
         };
@@ -98,7 +108,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&rgb_ug RGB_COLOR_HSB(200,100,2)>
+                = <&rgb_ug RGB_NPAD>
                 , <&to _NUMPAD>
                 ;
         };
@@ -121,7 +131,7 @@
             timeout-ms = <50>;
             key-positions = <4 14 24>;
             bindings = <&rch A A>;
-            layers = <_NAVI>;
+            // layers = <_NAVI>;
         };
 
         combo_RESET_R {
@@ -132,40 +142,33 @@
         };
 
         combo_ESC {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_TAB {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <11 12>;
             bindings = <&kp TAB>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_DEL {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <7 8>;
             bindings = <&kp DEL>;
             layers = <_BASE _NUM_SYM>;
         };
             
         combo_RET {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <17 18>;
             bindings = <&kp RET>;
             layers = <_BASE _NUM_SYM>;
         };
             
-//        combo_X {
-//            timeout-ms = <50>;
-//            key-positions = <17 18>;
-//            bindings = <&kp X>;
-//            layers = <_BASE _NUM_SYM>;
-//        };
-
         combo_lAltGr {
             timeout-ms = <50>;
             key-positions = <20 21>;
@@ -181,42 +184,42 @@
         };
           
         combo_LPAR {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <12 13>;
             bindings = <&kp LPAR>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_RPAR {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <16 17>;
             bindings = <&kp RPAR>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_LBRC {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <2 3>;
             bindings = <&kp LBRC>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_RBRC {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <6 7>;
             bindings = <&kp RBRC>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_LBKT {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <22 23>;
             bindings = <&kp LBKT>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_RBKT {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <26 27>;
             bindings = <&kp RBKT>;
             layers = <_BASE _NUM_SYM>;
@@ -237,14 +240,14 @@
 //        };
 
         combo_GT {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <27 28>;
             bindings = <&kp GT>;
             layers = <_BASE _NUM_SYM>;
         };
 
         combo_LT {
-            timeout-ms = <45>;
+            timeout-ms = <40>;
             key-positions = <21 22>;
             bindings = <&kp LT>;
             layers = <_BASE _NUM_SYM>;
@@ -270,36 +273,36 @@
 
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_COPY_CUT";
+            label = "CTRL_COPY_PASTA";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp LC(C)>, <&kp LC(X)>;
+            bindings = <&kp LC(C)>, <&kp LC(V)>;
         };
 
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
-            label = "GUI_COPY_CUT";
+            label = "GUI_COPY_PASTA";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp LG(C)>, <&kp LG(X)>;
+            bindings = <&kp LG(C)>, <&kp LG(V)>;
         };
 
-        ctrl_v: ctrl_v {
-                compatible = "zmk,behavior-hold-tap";
-                label = "CTRL_PASTA_HOLD";
-                #binding-cells = <2>;
-                flavor = "tap-preferred";
-                tapping-term-ms = <400>;
-                bindings = <&kp>, <&td3>;
+        ctrl_x: ctrl_x {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CTRL_CUT_HOLD";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+            bindings = <&kp>, <&td3>;
         };
 
-        gui_v: gui_v {
-                compatible = "zmk,behavior-hold-tap";
-                label = "GUI_PASTA_HOLD";
-                #binding-cells = <2>;
-                flavor = "tap-preferred";
-                tapping-term-ms = <400>;
-                bindings = <&kp>, <&td4>;
+        gui_x: gui_x {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GUI_CUT_HOLD";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+            bindings = <&kp>, <&td4>;
         };
 
         bspctap: backsapce-tap {
@@ -307,8 +310,8 @@
                 label = "BSPC_TAP_LSHIFT_HOLD";
                 #binding-cells = <2>;
                 flavor = "balanced";
-                tapping-term-ms = <180>;
-                quick-tap-ms = <180>;
+                tapping-term-ms = <170>;
+                quick-tap-ms = <170>;
                 // global-quick-tap;
                 bindings = <&kp>, <&kp>;
         };
@@ -318,8 +321,8 @@
                 label = "SPACE_TAP_MO_SYM_HOLD";
                 #binding-cells = <2>;
                 flavor = "balanced";
-                tapping-term-ms = <180>;
-                quick-tap-ms = <180>;
+                tapping-term-ms = <200>;
+                quick-tap-ms = <200>;
                 // global-quick-tap;
                 bindings = <&mo_NUM_SYM>, <&kp>;
         };
@@ -379,15 +382,15 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  Q  |  W  |  F  |  P  |  B  |    |  K  |  L  |  U  |  Y  | ' " |
+// |  Q  |  F  |  V  |  P  |  B  |    |  K  |  L  |  U  |  Y  |  J  |
 // |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-// |  X  |  Z  |  C  |  D  |  V  |    |  J  |  H  | , ; | . : | ? ! |
+// |  '  |  Z  |  C  |  D  |  W  |    |  X  |  H  | , ; | . : |  "  |
 //         | _NAVI | SHIFT(BSPC) |    | _NUM_SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp Q &kp W &kp F &kp P &kp B      &kp K &kp L &kp U &kp Y &kp SQT
-   &kp A &kp R &kp S &kp T &kp G      &kp M &kp N &kp E &kp I &kp O
-   &kp X &kp Z &kp C &kp D &kp V      &kp J &kp H &com_sem &dot_col &qmk_exc
-         &td0 &bspctap LSHIFT BSPC    &spctap X SPACE &td1
+   &kp Q   &kp F &kp V &kp P &kp B      &kp K &kp L &kp U    &kp Y    &kp J
+   &kp A   &kp R &kp S &kp T &kp G      &kp M &kp N &kp E    &kp I    &kp O
+   &kp SQT &kp Z &kp C &kp D &kp W      &kp X &kp H &com_sem &dot_col &kp DQT
+         &td0 &bspctap LSHIFT BSPC      &spctap X SPACE &td1
                         >;
                 };
 
@@ -396,12 +399,12 @@
 // |  !  |  @  |  #  |  $  |  %  |    |  ^  |  &  |  *  |  (  |  )  |
 // |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
 // |  \  |  ?  |  _  |  -  |  `  |    |  ~  |  +  |  =  |  |  |  /  |
-//                  | SPC | BSPC |    |      | RET |
+//                  | SPC | BSPC |    |      |     |
                         bindings = <
    &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR
    &kp N1   &kp N2    &kp N3    &kp N4    &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
    &kp BSLH &kp QMARK &kp UNDER &kp MINUS &kp GRAVE      &kp TILDE &kp PLUS  &kp EQUAL &kp PIPE  &kp FSLH
-                                &kp SPACE &kp BSPC       &none     &kp RET
+                                &kp SPACE &kp BSPC       &none     &none
                         >;
                 };
 
@@ -412,7 +415,7 @@
 // |        |      | CALC  | TAB   | APP  |    | APP  | TAB  |      |      |     |
 //                         | _BASE | BSPC |    | SPACE | _BASE |
                         bindings = <
-   &kp ESC    &none    &ctrl_v LC(V) V &gui_v LG(V) V &kp PSCRN      &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL
+   &kp ESC    &none    &ctrl_x LC(X) X &gui_x LG(X) X &kp PSCRN      &kp PG_UP &kp HOME &kp UP   &kp END   &kp DEL
    &sk LSHIFT &sk LALT &sk LCTRL       &sk LGUI       &kp INS        &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
    &none      &none    &kp C_AL_CALC   &kp TAB        &kp K_APP      &kp K_APP &kp TAB  &none    &none     &none
                                        &to_BASE       &kp BSPC       &kp SPACE &to_BASE
@@ -426,24 +429,24 @@
 // |     | F9 | F10 | F11 | F12 |    | APP  |  TAB  |       |      |        |
 //                 | SPC | BSPC |    |      |       |
                         bindings = <
-   &kp ESC &kp F1 &kp F2  &kp F3  &kp F4        &kp C_AL_CALC &gui_v LG(V) V &ctrl_v LC(V) V &none    &kp DEL
+   &kp ESC &kp F1 &kp F2  &kp F3  &kp F4        &kp C_AL_CALC &gui_x LG(X) X &ctrl_x LC(X) X &none    &kp DEL
    &kp RET &kp F5 &kp F6  &kp F7  &kp F8        &kp INS       &sk LGUI       &sk LCTRL       &sk LALT &sk LSHIFT
    &none   &kp F9 &kp F10 &kp F11 &kp F12       &kp K_APP     &kp TAB        &none           &none    &none
-                        &kp SPACE &kp BSPC      &none         &none
+                       &caps_word &kp BSPC      &none         &none
                         >;
                 };
 
                 numpad_layer {
-// -------------------------------------------    -------------------------------
-// | BT1     | BT2  | BT3   | BT4  | BT5     |    | + * |  7  |  8  |  9  |  .  |
-// | RGB_EFF | VOL- | MUTE  | VOL+ | OUT_TOG |    | ESC |  4  |  5  |  6  |  0  |
-// |         | PREV | PLAYP | NEXT | BT CLR  |    | - / |  1  |  2  |  3  |     |
-//                           | _BASE | BKSPC |    | ENTER | _BASE |
+// ---------------------------------------    --------------------------------
+// | BT1 | BT2  | BT3   | BT4  | BT5     |    | + * |  7  |  8  |  9  |  .   |
+// |     | VOL- | MUTE  | VOL+ | OUT_TOG |    | ESC |  4  |  5  |  6  |  0   |
+// |     | PREV | PLAYP | NEXT | BT CLR  |    | - / |  1  |  2  |  3  | BSPC |
+//                        | _BASE | BSPC |    | ENTER | _BASE |
                         bindings = <
-   &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &plus_multi   &kp KP_N9  &kp KP_N8  &kp KP_N7    &kp KP_DOT
-   &rgb_ug RGB_COLOR_HSB(30,95,2) &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &out OUT_TOG      &kp ESC       &kp KP_N6  &kp KP_N5  &kp KP_N4  &kp KP_N0
-   &none           &kp C_PREV   &kp C_PP     &kp C_NEXT   &bt BT_CLR        &minus_div    &kp KP_N3  &kp KP_N2  &kp KP_N1    &none
-                                             &to_BASE     &kp BSPC          &kp KP_ENTER  &to_BASE
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &plus_multi   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_DOT
+   &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &out OUT_TOG      &kp ESC       &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_N0
+   &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &bt BT_CLR        &minus_div    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp BSPC
+                                          &to_BASE     &kp BSPC          &kp KP_ENTER  &to_BASE
                         >;
                 };                
     };
