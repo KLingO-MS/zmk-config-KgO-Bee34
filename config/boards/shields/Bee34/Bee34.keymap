@@ -427,14 +427,14 @@
 
                 base_layer {
 // -------------------------------    -------------------------------
-// |  Q  |  F  |  V  |  P  |  B  |    |  K  |  L  |  U  |  Y  |  J  |
-// |  A  |  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
-// |  '  |  Z  |  C  |  D  |  W  |    |  X  |  H  | , ; | . : |  "  |
+// |  B  |  Y  |  O  |  U  |  X  |    |  Q  |  L  |  D  |  W  |  V  |
+// |  C  |  I  |  E  |  A  | , ; |    | . : |  H  |  T  |  S  |  N  |
+// |  G  |  Z  |  J  |  K  |  "  |    |  '  |  R  |  M  |  F  |  P  |
 //         | _NAVI | SHIFT(BSPC) |    | _SYM(SPC) | _FKEYS(_NUMPAD) |
                         bindings = <
-   &kp Q        &kp F       &kp V        &kp P       &kp B     &kp K  &kp L       &kp U        &kp Y       &kp J
-   &hml LSHFT A &hml LALT R &hml LCTRL S &hml LGUI T &kp G     &kp M  &hmr LGUI N &hmr LCTRL E &hmr LALT I &hmr LSHFT O
-   &kp SQT      &kp Z       &kp C        &kp D       &kp W     &kp X  &kp H       &com_sem     &dot_col    &kp DQT
+   &kp B        &kp Y       &kp O        &kp U       &kp X     &kp K    &kp L       &kp U        &kp Y       &kp J
+   &hml LSHFT C &hml LALT I &hml LCTRL E &hml LGUI A &com_sem  &dot_col &hmr LGUI H &hmr LCTRL T &hmr LALT S &hmr LSHFT N
+   &kp G        &kp Z       &kp J        &kp K       &kp DQT   &kp SQT  &kp R       &kp M        &kp F       &kp P
                                  &tdl &bspctap LSHIFT BSPC     &spctap X SPACE &tdr
                         >;
                 };
